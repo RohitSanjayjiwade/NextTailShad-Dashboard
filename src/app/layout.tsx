@@ -23,8 +23,10 @@ export default function RootLayout({
         <Sidebar />
         
         <main className="grid w-full h-full pl-[300px]">
-        <Header />
-        {children}
+          <Header />
+          <div className="p-8">
+            {children}
+          </div>
         </main>
       </body>
     </html>
