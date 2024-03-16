@@ -1,8 +1,10 @@
 import Calendar from "@/components/Cards/Calendar";
+import { DataTableDemo } from "@/components/Cards/DataTable";
 import General from "@/components/Cards/General";
 import Lines from "@/components/Cards/Lines";
+import { TableDemo } from "@/components/Cards/Table";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 
 export default function Home() {
@@ -16,10 +18,27 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-[32px]">
-          <Lines />
-          <Card className="h-[300px]">Hello World</Card>
-          <Card className="h-[300px]">Hello World</Card>
+      <div className="grid grid-cols-3 gap-[32px] h-[300px] overflow-hidden">
+        <Lines />
+        <Card className="overflow-y-scroll">
+          <CardHeader>
+            <CardTitle>Orders</CardTitle>
+            <CardDescription>These are the orders of this month.</CardDescription>
+          </CardHeader>
+          <div className="px-4">
+            <TableDemo />
+          </div>
+        </Card>
+
+         <Card className="overflow-y-scroll">
+          <CardHeader>
+            <CardTitle>Users</CardTitle>
+            <CardDescription>These are the users of this month.</CardDescription>
+          </CardHeader>
+          <div className="px-4">
+            <DataTableDemo />
+          </div>
+        </Card>
       </div>
 
     </div>
