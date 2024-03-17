@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import UserItem from "./UserItem";
 import { Command, CommandGroup, CommandItem, CommandList } from "./ui/command";
 import { BellIcon, Cookie, CreditCard, Inbox, MessageSquare, Settings, User } from "lucide-react";
@@ -71,6 +72,11 @@ export default function Sidebar() {
 			</Command>
 
 		</div>
-		<div>Settings / Notifications</div>
+		<div>
+			<Link href="/team" className="flex items-center gap-2">
+				<Settings />
+				<span>Team settings</span>
+			</Link>
+		</div>
 	</div>;
 }
