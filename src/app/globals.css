@@ -73,4 +73,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .bg-card {
+    overflow: hidden!important;
+  }
 }
