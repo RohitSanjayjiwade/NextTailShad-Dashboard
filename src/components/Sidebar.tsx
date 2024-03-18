@@ -73,7 +73,7 @@ export default function Sidebar() {
 
 		</div>
 		<div>
-			<Link href="/team" className="flex items-center gap-2">
+			<Link href="/team" className="flex justify-center items-center gap-3">
 				<Settings />
 				<span>Team settings</span>
 			</Link>
